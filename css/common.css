@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/*清除浮动*/
+.clear::after{
+
+    content:"";
+    display:block;
+    clear:both;
+    height:0;  /*兼容旧浏览器 */
+    visibility:hidden;/*兼容旧浏览器 */
+
+}
+.clear {
+    *zoom:1;/*兼容旧浏览器 IE6~7 */
+}
+
+
+
+/*文字省略*/
+
+.one-line{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis ;
+}
+
+/*区分左右内容*/
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.arrow{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: url("../images/icon-normal.png") no-repeat #D0C4AF;
+
+}
+.arrow:hover{
+    background-color: #B19D79;
+}
+
+.pre{
+    background-position: 0 -4700px;
+
+}
+.next{
+    background-position: 0 -4880px;
+}
+
+
+
+
+
+/*每个盒子的宽,内容居中  主要内容公共类*/
+.row{
+    width: 1090px;
+    margin: 0 auto;
+}
+
+#main .brand{
+    margin-top: 30px;
+}
+.brand  .title{
+    margin-bottom: 20px;
+
+}
+
+.title  h2{
+    float: left;
+    margin-right: 20px;
+    font-size: 28px;
+    font-weight: 700;
+}
+/*.title*/ a{
+    color: #000;
+}
+/* .title */a:hover{
+    color: #B19D79;
+}
+
+.title .left span{
+    float: left;
+    font-size: 14px;
+    padding-top: 15px;
+}
+.title .right a{
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 15px;
+
+}
+
+
+
+/*图片放大效果*/
+
+.amplify  img{
+    transition: transform 1s;
+}
+.amplify:hover img{
+    transform: scale(1.05,1.05);
+}
+
+
+
+
+
+
+
